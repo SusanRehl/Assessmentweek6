@@ -39,6 +39,10 @@ img {
   height: 300px;
 }
 
+.powerselect {
+  font-family: 'Palatino', Impact, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+}
 #petUrl {
   width: 300px;
 }

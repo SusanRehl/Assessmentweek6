@@ -18,7 +18,17 @@
       <input type= "text" ng-model= "firstNameBinder" value= "" placeholder="first name">
       <input type= "text" ng-model= "lastNameBinder" value= "" placeholder="last name">
       <input type= "text" ng-model= "cityBinder" value= "" placeholder="city">
-      <input type= "text" ng-model= "powerNameBinder" value= "" placeholder="power name">
+      <select name="powername" class="powerselect" ng-model="powerNameBinder">
+        <option value="">-----Please Select-----</option>
+        <option value="Invisibility">Invisibility</option>
+        <option value="Flight">Flight</option>
+        <option value="Super Speed">Super Speed</option>
+        <option value="Heat Vision">Heat Vision</option>
+        <option value="Super Strength">Super Strength</option>
+        <option value="Accelerated Healing">Accelerated Healing</option>
+        <option value="Power Blast">Power Blast</option>
+        <option value="Animal Affinity">Animal Affinity</option>
+      </select>
       <button type="button" name="subButton" class="smallButton" ng-click= "addHero()" >Add Hero</button>
       <p> </p>
       <p> </p>

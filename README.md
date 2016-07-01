@@ -30,7 +30,7 @@ Animal Affinity
 Use the power_name string field as the value in your option elements. This would store the string on the Hero object.
 
 Hero Listing & Removal
-READ, DELETE This should show a list of heroes, displaying all the information from the entry captured in the view before. Each listing should have a button to delete the listing from the database.
+READ, DELETE: This should show a list of heroes, displaying all the information from the entry captured in the view before. Each listing should have a button to delete the listing from the database.
 
 Node Server - port 4242.
 
