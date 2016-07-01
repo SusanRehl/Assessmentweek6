@@ -1,51 +1,41 @@
 body {
-  font-family: 'Palatino', Impact, Helvetica, Arial, sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 h1 {
+  font-family: Impact, Helvetica, Arial, sans-serif;
   font-size: 50px;
-  color: #6c994d;
+  color: #002699;
   text-align: center;
-  margin: 100px;
-}
-
-h2, h3 {
-  color: #6c994d;
-  margin-bottom: 0;
+  margin: 100px 0 0 0;
+  background-color: #b3c6ff;
 }
 
 h2 {
+  font-family: Impact, Helvetica, Arial, sans-serif;
+  color: #002699;
   margin: 15px 0;
 }
 
-img {
-  z-index: 1;
-}
-
 .container {
-  background-color: #eaeedd;
+  background-color: #d3d3d3;
   margin-top: 50px;
   width: 1000px;
 }
 
 .smallButton {
-  font-family: 'Palatino', Impact, Helvetica, Arial, sans-serif;
+  font-family: Impact, Helvetica, Arial, sans-serif;
   font-size: 14px;
-  background-color: #cad4aa;
+  background-color: #b3c6ff;
   margin-top: 3px;
 }
 
 .heroRecord {
   height: 300px;
 }
+
 .alias {
-  font-size: 20px
-  font-weight: bold;
-  align: center;
-}
-
-
-}
-#petUrl {
-  width: 300px;
+  font: 20px Impact, Helvetica, Arial, sans-serif;
+  color: #cc0000;
+  margin-bottom: 0;
 }
