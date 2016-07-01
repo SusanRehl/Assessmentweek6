@@ -13,25 +13,47 @@
     <div ng-include="'partials/nav.html'"></div>
     <div ng-controller = 'addController'>
     <div class="container">
-      <h3>Add Hero</h3>
-      <input type= "text" ng-model= "aliasBinder" value= "" placeholder="alias" required>
-      <input type= "text" ng-model= "firstNameBinder" value= "" placeholder="first name">
-      <input type= "text" ng-model= "lastNameBinder" value= "" placeholder="last name">
-      <input type= "text" ng-model= "cityBinder" value= "" placeholder="city">
-      <select name="powername" class="powerselect" ng-model="powerNameBinder">
-        <option value="">-----Please Select-----</option>
-        <option value="Invisibility">Invisibility</option>
-        <option value="Flight">Flight</option>
-        <option value="Super Speed">Super Speed</option>
-        <option value="Heat Vision">Heat Vision</option>
-        <option value="Super Strength">Super Strength</option>
-        <option value="Accelerated Healing">Accelerated Healing</option>
-        <option value="Power Blast">Power Blast</option>
-        <option value="Animal Affinity">Animal Affinity</option>
-      </select>
-      <button type="button" name="subButton" class="smallButton" ng-click= "addHero()" >Add Hero</button>
+      <h3>Add A Hero</h3>
       <p> </p>
-      <p> </p>
+      <form class="form-horizontal" role="form">
+        <div class="form-group form-group-sm">
+          <div class="col-sm-4">
+          </div>
+          <div class="col-sm-4">
+            <input type= "text" class="form-control alias" ng-model= "aliasBinder" value= "" placeholder="alias" required>
+          </div>
+          <div class="col-sm-4">
+        </div>
+        </div>
+        <div class="form-group form-group-sm">
+          <div class="col-sm-3">
+            <input type= "text" class="form-control" ng-model= "firstNameBinder" value= "" placeholder="first name">
+          </div>
+          <div class="col-sm-3">
+            <input type= "text" class="form-control" ng-model= "lastNameBinder" value= "" placeholder="last name">
+          </div>
+          <div class="col-sm-3">
+            <input type= "text" class="form-control" ng-model= "cityBinder" value= "" placeholder="city">
+          </div>
+          <div class="col-sm-3">
+            <select name="powername" class="form-control" ng-model="powerNameBinder">
+              <option value="">-----Please Select-----</option>
+              <option value="Invisibility">Invisibility</option>
+              <option value="Flight">Flight</option>
+              <option value="Super Speed">Super Speed</option>
+              <option value="Heat Vision">Heat Vision</option>
+              <option value="Super Strength">Super Strength</option>
+              <option value="Accelerated Healing">Accelerated Healing</option>
+              <option value="Power Blast">Power Blast</option>
+              <option value="Animal Affinity">Animal Affinity</option>
+            </select>
+            </div>
+          </div>
+          <button type="button" name="subButton" class="smallButton" ng-click= "addHero()" >Add Hero</button>
+          <p> </p>
+          <p> </p>
+        </div>
+      </form>
     </div>
   </div>
   </body>

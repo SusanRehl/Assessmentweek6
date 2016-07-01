@@ -38,10 +38,13 @@ img {
 .heroRecord {
   height: 300px;
 }
+.alias {
+  font-size: 20px
+  font-weight: bold;
+  align: center;
+}
 
-.powerselect {
-  font-family: 'Palatino', Impact, Helvetica, Arial, sans-serif;
-  font-size: 14px;
+
 }
 #petUrl {
   width: 300px;
