@@ -7,18 +7,19 @@
     <script src="scripts/script.js" type="text/javascript"></script>
     <link rel="stylesheet" href="css/bootstrap.min.css" charset="utf-8">
     <link rel="stylesheet" href="css/stylesheet.css" charset="utf-8">
-    <title>Add a Pet</title>
+    <title>Add Hero</title>
   </head>
   <body align="center">
     <div ng-include="'partials/nav.html'"></div>
     <div ng-controller = 'addController'>
     <div class="container">
-      <h3>Add YOUR Pet!</h3>
-      <input type= "text" ng-model= "petNameBinder" value= "" placeholder="pet name" required>
-      <input type= "text" ng-model= "petAnimalBinder" value= "" placeholder="type of animal">
-      <input type= "text" ng-model= "petAgeBinder" value= "" placeholder="pet age">
-      <input type= "text" id="petUrl" ng-model= "imageBinder" value= "" placeholder="pet image url">
-      <button type="button" name="subButton" class="smallButton" ng-click= "addPet()" >Add Your Pet</button>
+      <h3>Add Hero</h3>
+      <input type= "text" ng-model= "aliasBinder" value= "" placeholder="alias" required>
+      <input type= "text" ng-model= "firstNameBinder" value= "" placeholder="first name">
+      <input type= "text" ng-model= "lastNameBinder" value= "" placeholder="last name">
+      <input type= "text" ng-model= "cityBinder" value= "" placeholder="city">
+      <input type= "text" ng-model= "powerNameBinder" value= "" placeholder="power name">
+      <button type="button" name="subButton" class="smallButton" ng-click= "addHero()" >Add Hero</button>
       <p> </p>
       <p> </p>
     </div>

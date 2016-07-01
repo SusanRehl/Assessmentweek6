@@ -1,53 +1,55 @@
 var myApp=angular.module( 'myApp', [] );
 
-var allThePets=[]; // creates array used in deleting individual records, matches ng-repeat param in index.html
+var allTheHeroes=[]; // creates array used in deleting individual records, matches ng-repeat param in index.html
 
 myApp.controller( 'addController', [ '$scope', '$http', function( $scope, $http){
 
-  $scope.addPet = function(){ // adds record on button click
+  $scope.addHero = function(){ // adds record on button click
     event.preventDefault();
     var objectToSend ={  // package object to send, with inputs
-      name: $scope.petNameBinder,  // reference these in html
-      animal: $scope.petAnimalBinder,
-      age: $scope.petAgeBinder,
-      image: $scope.imageBinder
+      alias: $scope.aliasBinder,  // reference these in html
+      first_name: $scope.firstNameBinder,
+      last_name: $scope.lastNameBinder,
+      city: $scope.cityBinder,
+      power_name: $scope.powerNameBinder
     }; // end object
     $http({  // sends object via POST
       method: 'POST',
       url: '/add',
       data: objectToSend
     }); // end post call
-    $scope.petNameBinder =''; // clears input boxes
-    $scope.petAnimalBinder ='';
-    $scope.petAgeBinder ='';
-    $scope.imageBinder = "";
+    $scope.aliasBinder =''; // clears input boxes
+    $scope.firstNameBinder ='';
+    $scope.lastNameBinder ='';
+    $scope.cityBinder = "";
+    $scope.powerNameBinder = "";
     console.log(objectToSend);
-  }; // end addPets function
-}]);  //end addCOntroller
+  }; // end addHero function
+}]);  //end addController
 
 myApp.controller( 'viewController', [ '$scope', '$http', function( $scope, $http){
 
-  $scope.getPets = function(){  // gets current recordset upon page load
+  $scope.getHeroes = function(){  // gets current recordset upon page load
     $http({   // gets recordset via GET
       method: 'GET',
-      url: '/viewPets',
+      url: '/viewHeroes',
     }).then( function( response ){  // success call - runs function with response parameter
       console.log(response);
-      $scope.allThePets = response.data;  // pulls the data from app.js and sets to allThePets
+      $scope.allTheHeroes = response.data;  // pulls the data from app.js and sets to allTheHeroes
     }, function myError( response ){
   console.log( response.statusText );
   }); // end error function
-  }; // end getPets function
+}; // end getHeroes function
 
-  $scope.deletePet = function(index){ // deletes pet on button click
-    var petToDelete = $scope.allThePets[index];  // removes the pet from the Dom
-    $scope.allThePets.splice(index, 1);
-    // console.log(petToDelete._id);
-    var petId = {id: petToDelete._id};  // creating object with the db id to send to server
+  $scope.deleteHero = function(index){ // deletes hero on button click
+    var heroToDelete = $scope.allTheHeroes[index];  // removes the hero from the Dom
+    $scope.allTheHeroes.splice(index, 1);
+    console.log(heroToDelete._id);
+    var heroId = {id: heroToDelete._id};  // creating object with the db id to send to server
     $http({
       method: 'POST',
-      url: '/deletePet',
-      data: petId
+      url: '/deleteHero',
+      data: heroId
     }); // end post
-  }; // end deletePets function
+  }; // end deleteHero function
 }]); // end viewController

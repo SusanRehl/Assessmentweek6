@@ -6,20 +6,21 @@
     <link rel="stylesheet" href="css/stylesheet.css" charset="utf-8">
     <script src="vendors/angular.min.js" type="text/javascript"></script>
     <script src="scripts/script.js" type="text/javascript"></script>
-    <title>View The Pets!</title>
+    <title>View The Heroes!</title>
   </head>
   <body align="center">
     <div ng-include="'partials/nav.html'"></div>
-    <div ng-controller = 'viewController' ng-init='getPets()'>
+    <div ng-controller = 'viewController' ng-init='getHeroes()'>
       <div class="container">
-         <h2>The Pets of Nu</h2>
+         <h2>Hero List</h2>
          <p></p>
          <div class="row">
-           <div class="petRecord col-md-4" ng-repeat='record in allThePets'>
-             <img ng-src='{{record.image}}'><br />
-             <b>{{ record.name }}</b><br />
-             {{ record.age}} year old {{ record.animal}}<br />
-             <button type="button" name="delButton"  class="smallButton" ng-click="deletePet($index)">Delete Pet</button>
+           <div class="heroRecord col-md-3" ng-repeat='record in allTheHeroes'>
+             <b>{{ record.alias }}</b><br />
+             {{ record.first_name}} {{ record.last_name}}<br />
+             {{ record.city}}<br />
+             {{ record.power_name }}<br />
+             <button type="button" name="delButton"  class="smallButton" ng-click="deleteHero($index)">Delete Hero</button>
              <p> </p>
            </div>
          </div>

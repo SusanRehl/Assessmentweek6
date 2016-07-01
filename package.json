@@ -1,7 +1,7 @@
 {
-  "name": "weassignment5",
+  "name": "assessmentweek6",
   "version": "1.0.0",
-  "description": "pet app with angular and mongo",
+  "description": "hero app with angular and mongo",
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.15.2",
